@@ -1,0 +1,38 @@
+@CHARSET "UTF-8";
+
+
+.ul-user li
+{
+
+	margin-top: 20px;
+}
+
+.body-left
+{
+	padding: 0 10px;
+}
+
+ .li-head
+{
+	border-bottom:1px solid #ededed;
+	font-size:16px;
+	color: #222;
+	/* height:64px;
+	line-height:64px; */
+	font-weight:bold; 
+	/* text-align:center; */
+	margin-top:10px;
+	padding-bottom:10px;
+}
+.li-add-user input, .li-add-user select
+{
+	width: 160px;
+	margin-left: 6px;
+	margin-right: 10px;
+}
+
+.a-modify-password
+{
+	float: right;
+	
+}

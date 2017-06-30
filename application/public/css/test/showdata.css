@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+
+.ul-test-data
+{
+	padding: 10px;
+}
+.test_data li
+{
+	display: inline-block;
+}
+
+.span-value
+{
+	text-decoration: underline;
+}
+.li-file-display img
+{
+	width:20px;
+	height: 20px;
+}

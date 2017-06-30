@@ -1,0 +1,166 @@
+@CHARSET "UTF-8";
+
+
+.body-left, .body-right
+{
+	float:left;
+	height:100%;
+}
+
+.body-left
+{
+ 	border-right:1px solid #ededed;
+	width:20%;
+}
+
+
+.body-right
+{
+	width:75%;
+	margin-left:4%;
+}
+.ul-test li
+{
+
+
+}
+.ul-test .a-test
+{
+	background-color: #D2D2D2;
+	display:block;
+	with:100px;
+	height:42px;
+	line-height:42px;
+	border-bottom:1px solid #ededed;
+	text-align:center;
+	font-size: 16px;
+		margin-bottom:10px;
+}
+.ul-test .checked
+{
+	background-color: #086ED5;
+	color:#ffffff; 
+	border-bottom:1px solid #044E97;
+	font-style:italic;
+	font-weight:bold;
+}
+.ul-test .a-test:hover
+{
+	background-color: #086ED5;
+	color:#ffffff; 
+	border-bottom:1px solid #044E97;
+	font-style:italic;
+	font-weight:bold;
+}
+.li-func-head
+{
+	width:100%;
+	height:42px;
+}
+.ul-func li
+{
+	overflow:hidden;
+}
+.ul-func .a-func
+{
+	background-color: #D2D2D2;
+	border-right:1px solid #ededed;
+	display:block;
+	width:120px;
+	float:left;
+	text-align:center;
+	height:42px;
+	line-height:42px;
+	font-weight:bold;
+	font-size:16px;
+	margin-right: 20px;
+}
+.ul-func .checked
+{
+	background-color: #30A080;
+	color:#ffffff; 
+	border-bottom:1px solid #30A080;
+	font-style:italic;
+	font-weight:bold;
+}
+.ul-func .a-func:hover
+{
+	background-color: #30A080;
+	color:#ffffff; 
+	border-bottom:1px solid #30A080;
+	font-style:italic;
+	font-weight:bold;
+}
+
+.ul-show-test .li-test .span-value
+{
+	margin-right: 10px;
+	
+	text-decoration: underline;
+}
+
+.ul-show-test .a-link
+{
+	color:#666;
+}
+
+
+
+
+.li-func-insert, .li-func-search
+{
+	display:none;
+}
+
+.ul-insert-com, .ul-insert-item
+{
+	border:0px solid #ededed;
+	width:99%;
+	margin-top: 15px;
+
+}
+.ul-insert-item
+{
+
+	line-height:32px;
+
+}
+.ul-insert-com
+{
+
+	/* height:140px; */
+}
+.ul-insert-com .li-create
+{
+	display: block;
+}
+
+
+.ul-insert-com li, .ul-insert-item li
+{
+	border:0;
+	display:inline-block;
+	margin-top:15px;
+	margin-left:10px;
+}
+
+
+.ul-show-test li
+{
+	border-top: 1px solid #ededed;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+.ul-search
+{
+	margin-top: 20px;
+}
+.ul-search .li-tips
+{
+	margin-bottom: 10px;
+	font-style: italic;
+		color: #222;
+}
+
+

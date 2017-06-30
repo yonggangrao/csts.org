@@ -1,0 +1,145 @@
+创建数据库
+CREATE DATABASE cms
+
+创建表
+
+/*用户表*/
+create table user
+(
+job_id varchar(16) not null,
+name varchar(256) not null, 
+password varchar(256) not null,
+level char(1) default '1',
+telephone char(16),
+department varchar(256),
+primary key(job_id)
+)engine=InnoDB default charset=utf8;
+
+
+/*测试表*/
+create table test
+(
+id int not null auto_increment,
+model_number varchar(256) not null, /*型号*/
+equipment_number varchar(256) not null, 
+test_location varchar(256) not null, 
+
+tester_id varchar(16) not null,
+primary key(id),
+foreign key(tester_id) references user(job_id) 
+)engine=InnoDB default charset=utf8 auto_increment=1;
+
+/*1变速器噪声测试表*/
+create table BSQZST
+(
+id int not null auto_increment,
+test_id int not null,
+ceshijuli float not null,/*测试距离*/
+dangwei char(2) not null,/*档位*/
+shuruzhuansu int not null, /*输入转速*/
+shiyanniuju float not null, /*实验扭距*/
+fangwei char(2) not null, /*方位*/
+cedeshengji float not null, /*测得声级*/
+bendizaosheng float not null, /*本底噪声*/
+chazhi float not null, /*差值*/
+xiuzhengzhi int not null, /*修正值*/
+zuizhongzaoshengzhi float not null, /*最终噪声值*/
+MAX float not null, /*MAX*/
+youwen float not null, /*油温*/
+test_time int not null,
+primary key(id),
+foreign key(test_id) references test(id)
+)engine=InnoDB default charset=utf8 auto_increment=1;
+
+
+/*2变速器传动效率测试表*/
+create table BSQCDXLT
+(
+id int not null auto_increment,
+ test_id int not null,
+dangwei char(2) not null,/*档位*/
+shuruzhuansu int not null, /*输入转速*/
+shiyanniuju float not null, /*试验扭距*/
+youwen float not null, /*油温*/
+shuchuniuju float not null, /*输出扭距*/
+chuandongxiaolv float not null,/*传动效率*/
+test_time int not null,
+primary key(id),
+foreign key(test_id) references test(id)  
+)engine=InnoDB default charset=utf8 auto_increment=1;
+
+/*3变速器换档性能测试表*/
+create table BSQHDXNT
+(
+id int not null auto_increment,
+ test_id int not null,
+huandang varchar(16) not null, /*换档*/
+chesu float not null, /*车速*/
+huandangcishu int not null, /*换档次数*/
+qudongzhouzhuansu int not null, /*驱动轴转速*/
+huandangli float not null,/*换档力*/
+youwen float not null, /*油温*/
+mubiaozhuansu int not null, /*目标转速*/
+tongbuli float not null, /*同步力*/
+tongbuniuju float not null, /*同步扭距*/
+bingbushijian float not null, /*同步时间*/
+test_time int not null,
+primary key(id),
+foreign key(test_id) references test(id) 
+)engine=InnoDB default charset=utf8 auto_increment=1;
+
+/*4变速器静扭强度测试表*/
+create table BSQJNQDT
+(
+id int not null auto_increment,
+ test_id int not null,
+sunhuaiweizhi varchar(16) not null, /*损坏位置*/
+shuruzhuanjiao float not null, /*输入转角*/
+shiyanniuju float not null,/*实验扭距*/
+fadongjizuidaniuju float not null,/*发动机最大扭距*/
+xuyonghoubeixishu float not null, /*许用后备系数*/
+jingniuqiangduhoubeixishu float not null, /*静扭强度后备系数*/
+hege char(2) not null, /*是否合格*/
+test_time int not null,
+primary key(id),
+foreign key(test_id) references test(id) 
+)engine=InnoDB default charset=utf8 auto_increment=1;
+
+/*变速器高速测试表*/
+create table BSQGST
+(
+id int not null auto_increment,
+test_id int not null,
+dangwei char(2) not null,/*档位*/
+shuruzhuansu int not null, /*输入转速*/
+shiyanniuju float not null, /*试验扭距*/
+chixushijian int not null, /*持续时间*/
+louyou char(2) not null, /*是否漏油*/
+zhouchengsunhuai char(2) not null, /*轴承损坏否*/
+chilunsunhuai char(2) not null, /*齿轮损坏否*/
+hege char(2) not null, /*是否合格*/
+test_time int not null,
+primary key(id),
+foreign key(test_id) references test(id) 
+)engine=InnoDB default charset=utf8 auto_increment=1;
+
+
+/*变速器动态密封测试表*/
+create table BSQDTMFT
+(
+id int not null auto_increment,
+test_id int not null,
+xunhuandaihao varchar(16) not null,/*循环代号*/
+shiyanjieduan char(2) not null,/*试验阶段*/
+dangwei char(2) not null,/*档位*/
+youwen float not null, /*油温*/
+shuruzhuansu int not null, /*输入转速*/
+chixushijian int not null, /*循环时间*/
+louyou char(2) not null, /*是否漏油*/
+hege char(2) not null, /*是否合格*/
+test_time int not null,
+primary key(id),
+foreign key(test_id) references test(id) 
+)engine=InnoDB default charset=utf8 auto_increment=1;
+
+

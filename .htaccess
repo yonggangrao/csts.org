@@ -1,0 +1,6 @@
+Options -Indexes
+
+RewriteEngine On
+
+RewriteRule !\.(js|ico|gif|jpg|png|jpeg|css)$ main.php
+

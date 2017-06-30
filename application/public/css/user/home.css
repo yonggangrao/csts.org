@@ -1,0 +1,29 @@
+@CHARSET "UTF-8";
+
+
+.body .left
+{
+	border:0px solid #ededed;
+	 float:left;
+	/* display:inline-block; */
+	width:64%;
+}
+
+.body .left .div-item
+{
+	border:1px solid #ededed;
+	margin-top:30px;
+}
+.body .right 
+{
+	border:0px solid #ededed;
+ 	float:right;
+		/* display:inline-block; */
+	
+	width:32%;
+}
+.body .right .div-item
+{
+	border:1px solid #ededed;
+		margin-top:30px;
+}
